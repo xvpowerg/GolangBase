@@ -33,6 +33,7 @@ func testCopy() {
 }
 
 func readFile() {
+	//只可讀取因為權限為O_RDONLY
 	file, err := os.Open(`C:\MyDir\msg.txt`)
 	defer file.Close()
 	if err != nil {
