@@ -9,4 +9,8 @@ func main() {
 	} else {
 		fmt.Println("未成年")
 	}
+	//可以使用初始化指令
+	if y := 2 + 5; y >= 7 {
+		fmt.Println(">=7")
+	}
 }
