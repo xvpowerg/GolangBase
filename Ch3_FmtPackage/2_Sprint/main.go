@@ -11,6 +11,7 @@ func main() {
 
 	name := "Ken"
 	weight := 56.234
+	//輸出字串
 	str := fmt.Sprintf("姓名:%s 體重:%.2f \n", name, weight)
 	fmt.Printf(str)
 }
