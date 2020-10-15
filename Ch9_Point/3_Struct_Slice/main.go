@@ -34,7 +34,7 @@ func main() {
 	per := perArry[0]
 	per.id = 12
 	fmt.Println("=======================================")
-	for i, _ := range perArry {
+	for i := range perArry {
 		perArry[i].id = 10
 	}
 	//perArry內的persion的id變為10
