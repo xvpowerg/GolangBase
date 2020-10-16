@@ -12,9 +12,9 @@ func main() {
 	if e != nil {
 		fmt.Println(e)
 	}
-	var size uint = 1024 * 1024 * 300 //300mb
-	data := make([]byte, size, size)  //產生資料
-	var buffSize int = 1024 * 1024    //5kb
+	var size uint = 1024 * 1024 * 300 //300MB
+	data := make([]byte, size, size)  //產生資料大小為300MB
+	var buffSize int = 1024 * 1024    //1MB 使用1mb的buffer
 	w := bufio.NewWriterSize(f, buffSize)
 	w.Write(data)
 	w.Flush()
