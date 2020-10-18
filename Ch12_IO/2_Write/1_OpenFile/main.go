@@ -24,7 +24,7 @@ func main() {
 	}
 	f.WriteString("\n")
 	rn, _ := f.WriteString("AAA")
-	rn2, _ := f.WriteString("BBBCC") //寫入文字數量
+	rn2, _ := f.WriteString("BBBCC") //rn,rn2寫入文字數量
 	fmt.Println(rn, rn2)
 
 }
