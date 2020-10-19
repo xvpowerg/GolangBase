@@ -17,6 +17,9 @@ func test3(s string) string {
 func test4(s string) (string, int) {
 	return strings.ToLower(s), len(s)
 }
+func init() {
+	fmt.Println("init() 只會運行一次 可做初始化用")
+}
 func main() {
 	test1()
 	test2("Gigi")
