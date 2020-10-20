@@ -13,3 +13,7 @@ type Dog struct {
 func (d Dog) info() {
 	fmt.Printf("Name:%s Age:%d\n", d.Name, d.Age)
 }
+
+func (d Dog) Print() {
+	fmt.Printf("Name:%s Age:%d\n", d.Name, d.Age)
+}

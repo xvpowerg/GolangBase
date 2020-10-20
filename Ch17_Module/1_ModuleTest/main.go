@@ -14,4 +14,5 @@ func main() {
 		Name: "NiNi",
 	}
 	fmt.Println(dog)
+	//dog.Print()
 }

@@ -9,6 +9,7 @@ type student struct {
 }
 
 func main() {
+
 	st1 := student{
 		1,
 		"Ken",
@@ -23,4 +24,17 @@ func main() {
 	}
 	fmt.Println(st2)
 
+	//取得student的指標
+	st3Obj := new(student)
+	st3Obj.id = 1000
+	st3Obj.name = "Howard"
+	st3Obj.score = 85.63
+	fmt.Println(st3Obj)
+	//使用	st3Obj := new(student) 等同於以下語法
+	// st3Obj := &student{
+	// 	name:  "Howard",
+	// 	id:    1000,
+	// 	score: 85.63,
+	// }
+	// fmt.Println(st3Obj)
 }
