@@ -14,6 +14,7 @@ func main() {
 	v1 := sum(1, 2, 3, 4, 5)
 	fmt.Println(v1)
 	values := []int{5, 6, 7, 8, 9}
+	//把Slice傳入Varargs
 	v2 := sum(values...)
 	fmt.Println(v2)
 
