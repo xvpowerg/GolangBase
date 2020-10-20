@@ -16,7 +16,7 @@ func main() {
 	   O_SYNC    // open for synchronous I/O.同步IO
 	   O_TRUNC   // truncate regular writable file when opened.會清空開啟的檔案
 	*/
-
+	//0666 表示 可讀可寫 wrx
 	f, e := os.OpenFile(`C:\MyDir\data.txt`, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 	defer f.Close()
 	if e != nil {
