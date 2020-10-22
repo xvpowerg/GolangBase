@@ -14,4 +14,13 @@ func main() {
 	//輸出字串
 	str := fmt.Sprintf("姓名:%s 體重:%.2f \n", name, weight)
 	fmt.Printf(str)
+	//輸出指標類型
+	str = fmt.Sprintf("Point %p \n", &name)
+	fmt.Printf(str)
+	//輸出name的類型
+	str = fmt.Sprintf("Type %T \n", name)
+	fmt.Printf(str)
+	//自動判斷name的類型給預設的格式
+	str = fmt.Sprintf("vale %v \n", name)
+	fmt.Printf(str)
 }
