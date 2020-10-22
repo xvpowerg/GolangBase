@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 //宣告在方法外時必須使用var
-var x = 83
+var p1 = 83
+var p2 int = 72
 
 func main() {
 	//宣告在方法內可使用:=
