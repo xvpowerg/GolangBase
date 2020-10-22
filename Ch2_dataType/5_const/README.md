@@ -8,9 +8,9 @@ const PI float64 = 3.1415927
     )
 ```
 ## iota
-+ 可自動給流水號
++ 自動流水號
 + 取代Enum
-## 使用方式
+## 自動給流水號
 ```go
 	//iota 會自動編號
 	//宣告星期幾
@@ -23,4 +23,14 @@ const PI float64 = 3.1415927
 		Sat
 		Sun
 	)
+```
+## 取代Enum
+```go
+type Animal int
+
+const (
+		Tiger Animal = iota
+		Cat
+		Dog
+)
 ```
