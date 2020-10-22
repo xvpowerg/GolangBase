@@ -8,4 +8,7 @@ func main() {
 	//slices
 	var values []int
 	fmt.Println(values == nil)
+	var myFun func()
+	fmt.Println("myFun:", myFun)
+
 }

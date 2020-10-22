@@ -1,21 +1,13 @@
-# 資料類型與宣告
-## 資料類型
-### 基本型態
-+ 整數
-  + int8, int16, int32, int64
-  + uint8, uint16, uint32, uint64
-+ 浮點數
-  + float32
-  + float64
-+ 複數
-  + complex64
-  + complex128
-+ Boolane
+# 字串
+字串不是基本型態，但很常用所以拿來說明
+## 宣告方式
 ```go
-//可使用var 直接指定類型宣告
-//或是使用:=
-//全域變數必須使用var
-var p1 = 83
-var p2 int = 72
-x := 42 + 7
+name := "Howard"
+
+var data string = "ABCD"
+使用``可以將段行與特殊字元放入字串變數 如雙引號 斷行不須使用\n
+article := `A
+This is "Keyword"
+C
+`
 ```
