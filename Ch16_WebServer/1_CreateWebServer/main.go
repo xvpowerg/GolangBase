@@ -13,7 +13,7 @@ var html string = `<!DOCTYPE html>
     <title>MyFistWeb</title>
 </head>
 <body>
-    <p>Home!GGGXXXX</p>
+    <p>Home!</p>
 </body>
 </html>`
 

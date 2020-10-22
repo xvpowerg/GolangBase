@@ -7,8 +7,8 @@ import (
 )
 
 var wg sync.WaitGroup
-var testNumber = 3
-var c = make(chan int)
+var testNumber = 10
+var c = make(chan int, testNumber)
 
 func sendMsg(i int) {
 	fmt.Printf("傳送i:%d中資料...\n", i)
@@ -18,7 +18,7 @@ func sendMsg(i int) {
 
 func receive() {
 	for v := range c {
-		//fmt.Printf("接收v:%d資料等待2秒...\n", v)
+		fmt.Printf("接收v:%d資料等待2秒...\n", v)
 		time.Sleep(time.Duration(2) * time.Second)
 		fmt.Printf("接收v:%d...\n", v)
 		wg.Done()
@@ -26,6 +26,7 @@ func receive() {
 }
 
 func main() {
+	//多個Goroutine的處裡方式
 	for i := 1; i <= testNumber; i++ {
 		wg.Add(1)
 		go sendMsg(i)
@@ -33,4 +34,5 @@ func main() {
 	go receive()
 	wg.Wait()
 	close(c)
+
 }

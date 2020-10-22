@@ -5,7 +5,7 @@ import (
 )
 
 var count int = 10
-var c = make(chan int, count)
+var c = make(chan int)
 
 func sendMsg() {
 	for i := 1; i <= count; i++ {

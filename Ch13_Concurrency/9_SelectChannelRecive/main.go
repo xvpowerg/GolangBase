@@ -8,7 +8,7 @@ import (
 var wg sync.WaitGroup
 
 func receive2(c1, c2 <-chan int, quit <-chan bool) {
-
+	//如果c1 c2同時傳送時　會隨機輸出
 	for {
 		select {
 		case v := <-c1:

@@ -21,5 +21,10 @@ func division(a int32, b int32) (int32, error) {
 }
 func main() {
 	v1, err := division(10, 2)
-	fmt.Println(v1, err)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	fmt.Println(v1)
+
 }
