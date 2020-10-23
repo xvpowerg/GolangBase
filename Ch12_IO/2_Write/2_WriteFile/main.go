@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	//將在記憶體的檔案寫出
+	//WriteFile 內包裝了OpenFile 讓我們方便寫檔案
 	var size uint = 1024 * 1024 * 300 //300mb
 	data := make([]byte, size, size)  //
 	ioutil.WriteFile(`C:\MyDir\TestData.txt`, data, 0666)

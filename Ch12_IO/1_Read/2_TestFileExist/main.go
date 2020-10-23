@@ -14,7 +14,7 @@ func main() {
 	} else if os.IsNotExist(err) {
 		fmt.Println("IsNotExist!")
 	}
-
+	//也可用封裝好的 os.Stat與 os.IsNotExist 搭配
 	filePath := `C:\MyDir\msg.txt`
 	_, err2 := os.Stat(filePath)
 	fmt.Println(os.IsNotExist(err2))

@@ -15,6 +15,7 @@ func main() {
 		return
 	}
 	//預設給定buff 4096byte,想改變size請使用NewReaderSize
+	//bufio.NewReader()
 	r := bufio.NewReaderSize(file, 1024*10) //給10kb的buffer
 	//可配合Scanner使用
 	i := 1
