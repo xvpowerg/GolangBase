@@ -12,11 +12,14 @@ func main() {
 	str1 := strconv.FormatInt(int64(v1), 10)
 	fmt.Println(str1)
 
+	s32 := strconv.FormatFloat(float64(v1), 'E', -1, 32)
+	fmt.Println(s32)
 	str2 := "13.56"
-	//字串轉浮點數
+	//字串轉浮點數 如果有錯誤err不會是nil
 	f1, err := strconv.ParseFloat(str2, 64)
 	if err != nil {
 		fmt.Println(err)
+		return
 	}
 	fmt.Println(f1)
 	str3 := "250"
