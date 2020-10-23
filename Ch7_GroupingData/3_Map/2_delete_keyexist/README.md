@@ -1,2 +1,3 @@
-# Map
-mpa[key]value
+# Delete Map
+
+
