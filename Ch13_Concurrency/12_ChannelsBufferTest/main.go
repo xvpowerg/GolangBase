@@ -20,7 +20,6 @@ func receive() {
 		//time.Sleep(time.Duration(1) * time.Millisecond)
 		if _, ok := <-c; !ok {
 			break
-
 		}
 		wg.Done()
 	}

@@ -6,6 +6,7 @@ import (
 )
 
 func receive1(c1, c2 <-chan int) {
+
 	for {
 		select {
 		case v := <-c1:
@@ -30,7 +31,7 @@ func main() {
 	c1 := make(chan int)
 	c2 := make(chan int)
 
-	go send1(c1, c2)
+	//go send1(c1, c2)
 	receive1(c1, c2)
 
 }
