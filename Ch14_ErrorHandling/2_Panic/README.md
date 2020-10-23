@@ -11,7 +11,7 @@ func testSize(size int) {
 }
 ```
 # recover()
-Panic 可搭配recover取的error，注意必須使用defer
+Panic 可搭配recover取得error，注意必須使用defer
 ```go
 	defer func() {
 		if err := recover(); err != nil {
