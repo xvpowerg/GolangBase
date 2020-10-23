@@ -11,6 +11,9 @@ func main() {
 	fmt.Println(v1, v2)
 	//強制轉型(Type Assertion) 只能用於interface
 	m, ok := v1.(int)
+	if !ok {
+		fmt.Println("轉型錯誤!")
+	}
 	fmt.Println(m, ok)
 	//可使用switch輸出類型
 	switch t := v2.(type) {
