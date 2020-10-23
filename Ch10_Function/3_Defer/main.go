@@ -8,6 +8,7 @@ func testDefer() {
 	fmt.Println("Test3")
 }
 
+//討論輸出順序
 func testDeferOrder() {
 	defer fmt.Println("Test1_1")
 	fmt.Println("Test2")
@@ -16,8 +17,8 @@ func testDeferOrder() {
 	defer fmt.Println("Test1_3")
 }
 
+//i變數會被儲存
 func testVar(i int) {
-	//i變數會被儲存
 	defer fmt.Println("TestVar Setp1:", i)
 	i++
 	defer fmt.Println("TestVar Setp2:", i)

@@ -1,0 +1,2 @@
+# StructMethodPoint
+將函數指定Struct時可使用Typte模式或是Point模式，他們的差異在哪?
