@@ -19,8 +19,9 @@ func main() {
 	fmt.Println("p1:", p1)
 	fmt.Println("p2:", p2)
 
-	//p3:= &p1
-	var p3 *person = &p1 //將p1的Point放到p3
+	p3 := &p1 //將p1的Point放到p3
+	//var p3 *person = &p1 //將p1的Point放到p3
+	//注意不須使用*p3
 	p3.id = 75
 	fmt.Println("p1:", p1)
 	fmt.Println("p3:", *p3)
