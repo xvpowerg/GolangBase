@@ -27,7 +27,7 @@ func main() {
 	//自動判斷name的類型給預設的格式
 	str = fmt.Sprintf("vale %v \n", &name)
 	fmt.Printf(str)
-	//輸入目前int的byte數
+	//輸出目前int的byte數
 	fmt.Println("int", unsafe.Sizeof(int(0)))
 
 }
