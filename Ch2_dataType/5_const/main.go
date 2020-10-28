@@ -4,9 +4,12 @@ import "fmt"
 
 func main() {
 
-	const PI float64 = 3.1415927
+	const PI float32 = 3.1415927
+	const E = 2.71828
+	const PLAY = 1
+
 	const (
-		a int     = 42
+		a int32   = 42
 		b float64 = 42.78
 		c string  = "James Bond"
 	)
@@ -22,26 +25,28 @@ func main() {
 		Sat
 		Sun
 	)
-	fmt.Println(Wed)
+	fmt.Println(Fri)
 
 	//宣告Animal
-	type Animal int
-	type Lnage int
+	type Animal int32
+	type Lange int32
 	const (
 		Tiger Animal = iota
 		Cat
 		Dog
 	)
 	const (
-		C Lnage = iota
+		C Lange = iota
 		Go
 		Java
 	)
-	fmt.Println(Tiger)
-	fmt.Println(Cat)
-	var zoo Animal = Tiger
+	fmt.Println("Tiger:", Tiger)
+	fmt.Println("Cat:", Cat)
+	fmt.Println("Dog:", Dog)
+	var zoo Animal = Cat
 	fmt.Println(zoo)
 	//java不是Lnage 類型所以錯誤
-	//var zoo2 Animal = Java
+	var zoo2 Lange = Go
+	fmt.Println(zoo2)
 
 }

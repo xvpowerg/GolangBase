@@ -6,6 +6,7 @@ func main() {
 
 	var v1 int32 = 20
 	var v2 float32 = 25.67
+
 	//整數轉浮點數
 	v2 = float32(v1)
 	fmt.Println(v2)

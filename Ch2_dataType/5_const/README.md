@@ -4,7 +4,7 @@
 ```go
 const PI float64 = 3.1415927
 	const (
-        a int     = 42
+        a int32     = 42
     )
 ```
 ## iota
