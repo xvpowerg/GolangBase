@@ -12,6 +12,8 @@ func main() {
 	//取道小數點第二位
 	fmt.Printf("身高:%.2f\n", height)
 
+	//輸出bool
+	fmt.Printf("是否連線:%t\n", true)
 	name := "Ken"
 	weight := 56.234
 	//輸出字串
