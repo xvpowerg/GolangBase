@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	v1 := 15
-	v2 := 2
+	v2 := 15
 	//大於
 	fmt.Printf("%v > %v =%t\n", v1, v2, v1 > v2)
 	//小於
@@ -17,4 +17,5 @@ func main() {
 	fmt.Printf("%d == %d =%v\n", v1, v2, v1 == v2)
 	//不等於
 	fmt.Printf("%d != %d =%v\n", v1, v2, v1 != v2)
+
 }

@@ -8,6 +8,7 @@ func main() {
 	v2 := 2
 	v4 := 15.0
 	v3 := 2.0
+
 	ans1 := v1 + v2
 	fmt.Printf("%d + %d=%d\n", v1, v2, ans1)
 	ans2 := v1 - v2
