@@ -19,8 +19,9 @@ func main() {
 	// fmt.Println(z)
 
 	// //給定類型
-	// var age byte = 100
-	// fmt.Println("age:", age)
+	//unit8
+	var age byte = 255
+	fmt.Println("age:", age)
 	// var height float32 = 178.56
 	// fmt.Println("height:", height)
 	// var weight int32 = 75

@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 
-	age := 18
+	age := 89
 	switch {
 	case age < 18:
 		fmt.Println("少年")

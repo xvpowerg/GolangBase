@@ -3,14 +3,22 @@ package main
 import "fmt"
 
 func main() {
-	age := 18
+	/*age := 17
 	if age >= 18 {
 		fmt.Println("成年")
 	} else {
 		fmt.Println("未成年")
-	}
-	//可以使用初始化指令
+	}*/
+
+	//可以使用初始化與宣告指令
 	if y := 2 + 5; y >= 7 {
-		fmt.Println(">=7")
+		fmt.Println("y>=7")
+		fmt.Println("y:", y)
 	}
+
+	//可以使用初始化指令一次初始化多個
+	/*if y, z := 2+5, 3*2.5; y >= 7 && z > 3 {
+		fmt.Println("y>=7 z > 3")
+	}*/
+
 }

@@ -8,18 +8,18 @@ func main() {
 	const (
 		PLAY Action = iota
 		STOP
-		EXIT
+		PAUSE
 	)
 
-	act := STOP
+	act := PLAY
 	switch act {
 	case PLAY:
 		fmt.Println("PLAY")
+		fallthrough
 	case STOP:
 		fmt.Println("STOP")
-		fallthrough
-	case EXIT:
-		fmt.Println("EXIT")
+	case PAUSE:
+		fmt.Println("PAUSE")
 	}
 
 }
