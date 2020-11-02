@@ -11,10 +11,5 @@ func main() {
 	values3 := []int{50, 90, 80}
 	values4 := append(values, values3...)
 	fmt.Println("values4:", values4)
-	//array to Slice
-	arr := [3]int{1, 2, 3}
-	slice1 := arr[0:]
-	fmt.Printf("arr type%T\n", arr)
-	fmt.Printf("slice1 type%T\n", slice1)
 
 }

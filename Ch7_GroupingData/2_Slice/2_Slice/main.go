@@ -13,6 +13,11 @@ func main() {
 	end := 4
 	fmt.Println(values[1:end])
 
+	//array to Slice
+	arr := [3]int{1, 2, 3}
+	slice1 := arr[0:]
+	fmt.Printf("arr type%T\n", arr)
+	fmt.Printf("slice1 type%T\n", slice1)
 	//不可負數
 	//fmt.Println(values[-1:-3])
 	//不可大到小
