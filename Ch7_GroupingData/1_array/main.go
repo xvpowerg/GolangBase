@@ -13,7 +13,8 @@ func main() {
 	arr2[2] = 32
 
 	fmt.Println("len:", len(arr2))
-
+	//i 是index
+	//v 是value
 	for i, v := range arr2 {
 		fmt.Printf("idx: %d,v: %d\n", i, v)
 	}
