@@ -4,8 +4,8 @@ import "fmt"
 
 func main() {
 	s1 := []int{6, 8, 9}
-	fmt.Printf("default Slice cap:%d\n", cap(s1))
-	fmt.Printf("default Slice cap:%d\n", cap(s1))
+	fmt.Printf("default Slice cap:%d\n", cap(s1)) //容量
+	fmt.Printf("default Slice len:%d\n", len(s1)) //長度
 
 	arr := make([]int, 8, 10)
 	fmt.Println(arr)
