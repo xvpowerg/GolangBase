@@ -35,6 +35,24 @@ func test4() {
 	s2 := list[3:]
 	fmt.Println("s1:", s1, "s2:", s2)
 }
+
+//宣告一組Slice 內容如下 90,80,90,20,80,90,20,80,60  使用map幫我記錄數字出現的次數
+func test5() {
+	list := []int{90, 80, 90, 20, 80, 90, 20, 80, 60}
+	//mpa的key存放Slice的數字內容
+	//mpa的value存放數量
+	countMap := make(map[int]int)
+	for _, v := range list {
+		count := 1
+		//如果map的key存在就對map的value做++的動作
+		if mapV, exist := countMap[v]; exist {
+			count = mapV
+			count++
+		}
+		countMap[v] = count
+	}
+	fmt.Printf("countMap:%v", countMap)
+}
 func main() {
-	test4()
+	test5()
 }
