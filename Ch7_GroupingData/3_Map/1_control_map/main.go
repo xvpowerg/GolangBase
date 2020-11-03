@@ -4,12 +4,12 @@ import "fmt"
 
 func main() {
 
-	/*stm := map[string]int{
+	stm := map[string]int{
 		"Ken":   80,
 		"Lindy": 70,
 		"Vivin": 25,
-	}*/
-	/*fmt.Println(stm)
+	}
+	fmt.Println(stm)
 	fmt.Println(stm["Lindy"])
 	v, ok := stm["Vivin"]
 	fmt.Println(v)
@@ -17,7 +17,7 @@ func main() {
 
 	if v, ok := stm["Lucy"]; ok {
 		fmt.Println(v)
-	}*/
+	}
 
 	//map使用range取值
 	/*for key, value := range stm {
@@ -25,10 +25,10 @@ func main() {
 	}*/
 
 	//使用make建立map
-	map2 := make(map[string]int)
+	/*map2 := make(map[string]int)
 	map2["Lucy"] = 95
 	map2["Ken"] = 78
 	score, ok := map2["Lucy"]
-	fmt.Println(score, ok)
+	fmt.Println(score, ok)*/
 
 }
