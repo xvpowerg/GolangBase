@@ -30,6 +30,7 @@ type ByAge []Person
 func (a ByAge) Len() int           { return len(a) }
 func (a ByAge) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
 func (a ByAge) Less(i, j int) bool { return a[i].Age < a[j].Age }
+
 func main() {
 	peoples := []Person{
 		{"Ken", 45},
@@ -43,10 +44,4 @@ func main() {
 	sort.Sort(ByAge(peoples))
 	fmt.Println(peoples)
 
-	//SliceStable Sort
-	//https://golang.org/pkg/sort/#example_SliceStable
-	// sort.SliceStable(peoples, func(i, k int) bool {
-	// 	return peoples[i].Age < peoples[k].Age
-	// })
-	// fmt.Println(peoples)
 }

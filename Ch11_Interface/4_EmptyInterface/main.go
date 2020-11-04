@@ -9,7 +9,7 @@ func main() {
 	v1 = 10
 	v2 = 20.56
 	fmt.Println(v1, v2)
-	//強制轉型(Type Assertion) 只能用於interface
+	//強制轉型(Type Assertion) 只能用於empty interface
 	m, ok := v1.(int)
 	if !ok {
 		fmt.Println("轉型錯誤!")
