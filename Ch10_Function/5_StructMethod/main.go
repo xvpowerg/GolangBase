@@ -20,5 +20,6 @@ func main() {
 	pe1 := person{id: 10,
 		name: "Ken"}
 	fmt.Println(pe1.info())
+	fmt.Println(pe1.infoP())
 
 }
