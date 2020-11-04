@@ -2,12 +2,11 @@ package main
 
 import "fmt"
 
-type person struct {
-	id   int
-	name string
-}
-
 func main() {
+	type person struct {
+		id   int
+		name string
+	}
 
 	p1 := person{
 		id:   1,
@@ -18,16 +17,16 @@ func main() {
 		name: "Vivin",
 	}
 
-	perArryPoint := make([]*person, 0, 5)
-	perArryPoint = append(perArryPoint, &p1, &p2)
+	perSlicePoint := make([]*person, 0, 5)
+	perSlicePoint = append(perSlicePoint, &p1, &p2)
 
-	for _, p := range perArryPoint {
+	for _, p := range perSlicePoint {
 		//希望Slice內的person id都改為10
 		p.id = 10
 	}
 	//成功
-	fmt.Printf("perArryPoint[0]:%v perArryPoint[1]:%v\n",
-		perArryPoint[0], perArryPoint[1])
+	fmt.Printf("perSlicePoint[0]:%v perSlicePoint[1]:%v\n",
+		perSlicePoint[0], perSlicePoint[1])
 	fmt.Printf("p1:%v p2:%v\n", p1, p2)
 
 }
