@@ -38,6 +38,7 @@ func main() {
 		{"Iris", 19},
 		{"Vivin", 26},
 	}
+
 	fmt.Println(peoples)
 	//把people 轉型為 ByAge
 	//https://golang.org/pkg/sort/#Sort
