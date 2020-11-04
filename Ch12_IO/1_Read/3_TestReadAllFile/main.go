@@ -7,7 +7,6 @@ import (
 )
 
 func main() {
-	//file, err := os.Open(`C:\MyDir\test.zip`)
 	file, err := os.Open(`C:\MyDir\msg.txt`)
 	if err != nil {
 		fmt.Println("err:", err)
