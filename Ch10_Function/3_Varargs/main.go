@@ -11,7 +11,7 @@ func sum(value ...int) int {
 }
 
 func main() {
-	v1 := sum(1, 2, 3, 4, 5)
+	v1 := sum(1, 2, 3, 4, 5, 1, 2)
 	fmt.Println(v1)
 	values := []int{5, 6, 7, 8, 9}
 	//把Slice傳入Varargs

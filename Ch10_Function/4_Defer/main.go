@@ -25,7 +25,7 @@ func testVar(i int) {
 }
 
 func main() {
-	testDefer()
+	//testDefer()
 	//testDeferOrder()
-	//testVar(1)
+	testVar(1)
 }

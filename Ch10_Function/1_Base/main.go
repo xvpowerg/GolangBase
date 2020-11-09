@@ -24,15 +24,16 @@ func test3(s1 string, s2 string) string {
 func test4(s string) (string, int) {
 	return strings.ToLower(s), len(s)
 }
+
 func main() {
-	test1()
+	//test1()
 	//test2("Gigi")
 
 	//name := test3("iris", "vivin")
 	//fmt.Println(name)
 
 	//接兩組變數的方式
-	//name, strlen := test4("LUCY")
-	//fmt.Println(name, strlen)
+	name, strlen := test4("LUCY")
+	fmt.Println(name, strlen)
 
 }

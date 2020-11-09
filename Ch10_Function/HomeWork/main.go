@@ -27,16 +27,6 @@ func reverses(list []int) ([]int, int) {
 // 	return list, len(list)
 // }
 
-func feb() func() int {
-	var a int
-	var b int = 1
-	return func() int {
-		ans := a + b
-		a, b = b, ans
-		return ans
-	}
-}
-
 func main() {
 	//製作一組函數名為reverses 可傳入Slice ，回傳兩個數值
 	//反轉的Slice
@@ -45,11 +35,4 @@ func main() {
 	nList, len := reverses(list)
 	fmt.Println(nList, len)
 
-	//使用閉包計算費氏數列12是多少?
-	f := feb()
-	ans := 0
-	for i := 1; i < 12; i++ {
-		ans = f()
-	}
-	fmt.Println("ans:", ans)
 }

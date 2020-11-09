@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 //可傳入方法到另一個方法
-func calculat(x int, y int, calcu func(int, int) int) int {
-	return calcu(x, y)
+func calculat(x int, y int, action func(int, int) int) int {
+	return action(x, y)
 }
 func main() {
 	f1 := func(x int, y int) int {

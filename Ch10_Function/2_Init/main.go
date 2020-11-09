@@ -5,12 +5,12 @@ import (
 )
 
 func init() {
-	fmt.Println("init() 只會運行一次 可做初始化用 1")
+	fmt.Println("init() 可做初始化用 1")
 }
 
-func init() {
-	fmt.Println("init() 只會運行一次 可做初始化用 2")
-}
 func main() {
-
+	fmt.Println("main.....")
+}
+func init() {
+	fmt.Println("init() 可做初始化用 2")
 }
