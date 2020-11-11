@@ -22,9 +22,14 @@ func main() {
 	if e != nil {
 		fmt.Println(e)
 	}
+
 	f.WriteString("\n")
-	rn, _ := f.WriteString("AAA")
+	/*rn, _ := f.WriteString("AAA")
 	rn2, _ := f.WriteString("BBBCC") //rn,rn2寫入文字數量
-	fmt.Println(rn, rn2)
+	fmt.Println(rn, rn2)*/
+
+	//使用以下方式也可寫入字串 效果一樣
+	/*io.WriteString(f, "Howard")
+	io.WriteString(f, "Ken")*/
 
 }

@@ -4,10 +4,10 @@ import "fmt"
 
 type Square struct {
 	height int
-	weight int
+	width  int
 }
 type Circle struct {
-	radius int
+	radius float64
 }
 
 type CalculateArea interface {
@@ -15,10 +15,10 @@ type CalculateArea interface {
 }
 
 func (t Square) area() {
-	fmt.Printf("Square: %d\n", t.height*t.weight)
+	fmt.Printf("Square: %d\n", t.height*t.width)
 }
 func (c Circle) area() {
-	fmt.Printf("Product: %.2f\n", float64(c.radius)*3.1415)
+	fmt.Printf("Product: %.2f\n", c.radius*3.1415)
 }
 
 func testArea(calArea CalculateArea) {
@@ -28,7 +28,7 @@ func testArea(calArea CalculateArea) {
 func main() {
 	s := Square{
 		height: 10,
-		weight: 20,
+		width:  20,
 	}
 	c := Circle{
 		radius: 10,

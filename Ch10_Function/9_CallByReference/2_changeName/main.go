@@ -13,7 +13,7 @@ func changeName(v *Test1) {
 func main() {
 
 	t1 := Test1{
-		"Ken",
+		name: "Ken",
 	}
 	changeName(&t1)
 	fmt.Println(t1)

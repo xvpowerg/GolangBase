@@ -8,6 +8,11 @@ type Item struct {
 	Price int
 }
 
+/*
+type Stringer interface {
+    String() string
+}
+*/
 // func (i Item) String() string {
 // 	return fmt.Sprintf("ID:%d Name:%s Price:%d\n", i.ID, i.Name, i.Price)
 // }

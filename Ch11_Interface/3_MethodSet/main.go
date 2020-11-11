@@ -26,14 +26,18 @@ func printItem(pri PrintItem) {
 func main() {
 	// T  可看到 T的方法
 	//*T  可看到 T的方法與*T的方法
+	/*
+		func (i T) 方法名稱() {}
+		func (i *T) 方法名稱() {}
 
-	it := item{
+	*/
+
+	var it item = item{
 		id:   10,
 		name: "Ken",
 	}
 	it.printId()
 	it.printName()
-	//printItem(it)//錯誤因為it不是point所以缺少printName
-	printItem(&it)
+	//printItem(it) //錯誤因為it不是point所以缺少printName
 
 }

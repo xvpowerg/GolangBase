@@ -16,9 +16,7 @@ func main() {
 	}
 	defer readf.Close()
 	defer writef.Close()
-	//必須給長度
-	buff := make([]byte, 8) //8bbyte buffer
-	//io.Copy()//預設32*1024 = 32kb buffer
-	io.CopyBuffer(writef, readf, buff)
+
+	io.Copy(writef, readf)
 
 }

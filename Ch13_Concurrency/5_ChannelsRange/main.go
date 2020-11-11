@@ -13,7 +13,7 @@ func sendMsg() {
 		c <- i
 		//	fmt.Printf("傳送i:%d傳送完成...\n", i)
 	}
-	//close(c)
+	close(c)
 
 }
 
