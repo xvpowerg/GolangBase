@@ -15,13 +15,13 @@ func main() {
 		return
 	}
 	//預設給定buff 4096byte,想改變size請使用NewReaderSize
-	//bufio.NewReader()
+	//bufio.NewReader(file)
 	r := bufio.NewReaderSize(file, 1024*10) //給10kb的buffer
 	//可配合Scanner使用
-	i := 1
 	s := bufio.NewScanner(r)
+	i := 0
 	for s.Scan() {
-		fmt.Println(s.Text(), i)
 		i++
+		fmt.Println(i, s.Text())
 	}
 }

@@ -6,9 +6,9 @@ import (
 )
 
 func main() {
-	//一次性讀取檔案所有內容到byte[]
-	//如果檔案過大會很佔記憶體
-	b, err := ioutil.ReadFile("c:/MyDir/msg.txt")
+	//使用檔案名稱讀檔
+	//Buffer會設定為檔案得長度+512
+	b, err := ioutil.ReadFile(`c:\MyDir\msg.txt`)
 	if err != nil {
 		fmt.Println(err)
 	}

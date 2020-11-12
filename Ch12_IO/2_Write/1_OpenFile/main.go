@@ -16,19 +16,22 @@ func main() {
 	   O_SYNC    // open for synchronous I/O.同步IO
 	   O_TRUNC   // truncate regular writable file when opened.會清空開啟的檔案
 	*/
-	//0666 表示 可讀可寫 wrx
+	//0666 表示 可讀可寫
+	//Linux
 	f, e := os.OpenFile(`C:\MyDir\data.txt`, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 	defer f.Close()
 	if e != nil {
 		fmt.Println(e)
+		return
 	}
 	f.WriteString("\n")
-	/*rn, _ := f.WriteString("AAA")
+	rn, _ := f.WriteString("AAA")
 	rn2, _ := f.WriteString("BBBCC") //rn,rn2寫入文字數量
-	fmt.Println(rn, rn2)*/
+
+	fmt.Println(rn, rn2)
 
 	//使用以下方式也可寫入字串 效果一樣
-	/*io.WriteString(f, "Howard")
-	io.WriteString(f, "Ken")*/
+	//io.WriteString(f, "Howard")
+	//io.WriteString(f, "Ken")
 
 }
