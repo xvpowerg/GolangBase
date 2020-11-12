@@ -21,10 +21,12 @@ func main() {
 		{"Iris", 19},
 		{"Vivin", 26},
 	}
+	//小到大排序
+	sortFunc := func(i, k int) bool {
+		return peoples[i].Age < peoples[k].Age
+	}
 	//SliceStable Sort
 	//https://golang.org/pkg/sort/#example_SliceStable
-	sort.SliceStable(peoples, func(i, k int) bool {
-		return peoples[i].Age < peoples[k].Age
-	})
+	sort.SliceStable(peoples, sortFunc)
 	fmt.Println(peoples)
 }

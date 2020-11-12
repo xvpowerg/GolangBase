@@ -6,6 +6,7 @@ import (
 )
 
 /*
+sort 套件
 type Interface interface {
     // Len is the number of elements in the collection.
     Len() int
@@ -32,6 +33,7 @@ func (a ByAge) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
 func (a ByAge) Less(i, j int) bool { return a[i].Age < a[j].Age }
 
 func main() {
+	//由小到大排序
 	peoples := []Person{
 		{"Ken", 45},
 		{"Lucy", 31},
@@ -42,6 +44,7 @@ func main() {
 	fmt.Println(peoples)
 	//把people 轉型為 ByAge
 	//https://golang.org/pkg/sort/#Sort
+
 	sort.Sort(ByAge(peoples))
 	fmt.Println(peoples)
 

@@ -22,7 +22,6 @@ func main() {
 	if e != nil {
 		fmt.Println(e)
 	}
-
 	f.WriteString("\n")
 	/*rn, _ := f.WriteString("AAA")
 	rn2, _ := f.WriteString("BBBCC") //rn,rn2寫入文字數量

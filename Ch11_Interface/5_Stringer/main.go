@@ -13,11 +13,11 @@ type Stringer interface {
     String() string
 }
 */
-// func (i Item) String() string {
-// 	return fmt.Sprintf("ID:%d Name:%s Price:%d\n", i.ID, i.Name, i.Price)
-// }
+func (i Item) String() string {
+	return fmt.Sprintf("ID:%d Name:%s Price:%d\n", i.ID, i.Name, i.Price)
+}
 func main() {
-	item := &Item{
+	item := Item{
 		ID:    10,
 		Name:  "Android",
 		Price: 52,

@@ -31,7 +31,7 @@ func main() {
 		func (i *T) 方法名稱() {}
 
 	*/
-
+	//      T
 	var it item = item{
 		id:   10,
 		name: "Ken",

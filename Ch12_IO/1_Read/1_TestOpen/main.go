@@ -17,13 +17,15 @@ func readFile() {
 	buffArray := make([]byte, 4096)
 
 	for {
-		index, err := file.Read(buffArray)
+
+		end, err := file.Read(buffArray)
+		//io.EOF 表示資料讀完了
 		if err != nil {
 			fmt.Println(err)
 			break
 		}
 		//fmt.Printf("v:%v", byteArray[:index])
-		fmt.Printf("v:%s", buffArray[:index])
+		fmt.Printf("v:%s", buffArray[:end])
 	}
 }
 func main() {
