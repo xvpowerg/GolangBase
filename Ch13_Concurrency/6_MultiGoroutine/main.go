@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"sync"
-	"time"
 )
 
 var wg sync.WaitGroup
@@ -16,8 +15,7 @@ func sendMsg(i int) {
 
 func receive() {
 	for v := range c {
-		fmt.Printf("接收v:%d資料等待2秒...\n", v)
-		time.Sleep(time.Duration(2) * time.Second)
+		fmt.Printf("接收v:%d\n", v)
 		wg.Done()
 	}
 }
