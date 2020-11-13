@@ -16,18 +16,19 @@ func sendMsg(i int) {
 func receive() {
 	for v := range c {
 		fmt.Printf("接收v:%d\n", v)
-		wg.Done()
+		//wg.Done()
 	}
 }
 
 func main() {
 	//多個Goroutine的處裡方式
+	//wg.Add(testNumber)
 	for i := 1; i <= testNumber; i++ {
-		wg.Add(1)
 		go sendMsg(i)
 	}
 	go receive()
-	wg.Wait()
-	close(c)
+
+	//wg.Wait()
+	//close(c)
 
 }
