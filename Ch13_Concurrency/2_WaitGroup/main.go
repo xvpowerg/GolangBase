@@ -12,6 +12,7 @@ func testLongTime() {
 	for i := 1; i <= 1000000; i++ {
 		log.Println(i)
 	}
+	wg.Done() //計數器減1
 }
 
 var wg sync.WaitGroup
@@ -23,8 +24,8 @@ func main() {
 		os.O_CREATE|os.O_TRUNC|os.O_WRONLY,
 		0666)
 	log.SetOutput(logf)
-	//testLongTime()
 	go testLongTime()
+	wg.Add(1) //計數器加1
 	fmt.Println("=======完成!========")
-
+	wg.Wait() //wg 計數器到0為止都會等待
 }
