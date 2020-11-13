@@ -23,8 +23,8 @@ func main() {
 		os.O_CREATE|os.O_TRUNC|os.O_WRONLY,
 		0666)
 	log.SetOutput(logf)
-	//testLongTime()
-	go testLongTime()
+	testLongTime()
+	//go testLongTime()
 	fmt.Println("=======完成!========")
 
 }
