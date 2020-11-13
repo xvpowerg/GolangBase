@@ -6,7 +6,6 @@ import (
 )
 
 func receive1(c1, c2 <-chan int) {
-
 	for {
 		select {
 		case v := <-c1:

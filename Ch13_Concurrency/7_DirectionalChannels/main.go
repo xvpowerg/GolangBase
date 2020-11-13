@@ -14,9 +14,9 @@ func testSend(ch chan<- int) {
 
 func main() {
 
-	c := make(chan int)
-	cr := make(<-chan int) //recive
-	cs := make(chan<- int) //send
+	c := make(chan int)    //可相容 送與收
+	cs := make(chan<- int) //send 送
+	cr := make(<-chan int) //recive 收
 
 	fmt.Printf("c %T\n", c)
 	fmt.Printf("cr %T\n", cr)
