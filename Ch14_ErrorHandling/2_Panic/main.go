@@ -16,11 +16,11 @@ func testSize(size int) {
 
 func main() {
 
-	defer func() {
+	/*defer func() {
 		if err := recover(); err != nil {
 			fmt.Println("err:", err)
 		}
-	}()
-	testSize(12)
+	}()*/
+	testSize(0)
 
 }
