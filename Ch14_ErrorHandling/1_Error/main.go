@@ -5,22 +5,18 @@ import (
 	"fmt"
 )
 
-/*
-type error interface {
-    Error() string
-}
-*/
-
 func division(a int32, b int32) (int32, error) {
-	res := a / b
 	var err error
 	if b == 0 {
-		err = errors.New("分母不可為0")
+		err = errors.New("分母不可為0") //常見建立error的方式呼叫 errors.New
+		return 0, err
 	}
-	return res, err
+	res := a / b
+
+	return res, nil
 }
 func main() {
-	v1, err := division(10, 2)
+	v1, err := division(10, 0)
 	if err != nil {
 		fmt.Println(err)
 		return

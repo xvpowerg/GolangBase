@@ -21,5 +21,6 @@ func main() {
 			fmt.Println("err:", err)
 		}
 	}()
-	testSize(0)
+	testSize(12)
+
 }

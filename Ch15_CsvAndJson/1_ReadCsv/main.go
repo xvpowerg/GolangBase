@@ -10,7 +10,7 @@ import (
 func readCsv(csvr *csv.Reader) {
 	for {
 		csvData, err := csvr.Read()
-		if err != nil && err == io.EOF {
+		if err == io.EOF {
 			break
 		}
 		fmt.Printf("id:%s name:%s score1:%s score2 %s \n",
@@ -28,7 +28,7 @@ func readAllCsv(csvr *csv.Reader) {
 
 func main() {
 
-	f1, err := os.Open("./student.csv")
+	f1, err := os.Open("student.csv")
 	if err != nil {
 		fmt.Println("err:", err)
 	}

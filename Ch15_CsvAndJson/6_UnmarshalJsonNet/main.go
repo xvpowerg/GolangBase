@@ -1,13 +1,11 @@
 package main
 
 import (
-	"bufio"
 	"encoding/json"
 	"fmt"
 	"io"
 	"io/ioutil"
 	"net/http"
-	"os"
 )
 
 const minReadBufferSize = 16
@@ -26,14 +24,11 @@ func readPm25Json() io.ReadCloser {
 }
 
 func downloadJson() {
-	uvi, _ :=
-		os.OpenFile("uvi.json", os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0666)
+
 	rd := readPm25Json()
 	defer rd.Close()
 	b, _ := ioutil.ReadAll(rd)
-	bfw := bufio.NewWriter(uvi)
-	bfw.Write(b)
-	bfw.Flush()
+	ioutil.WriteFile("uvi.json", b, 0666)
 }
 
 type UviInfo struct {

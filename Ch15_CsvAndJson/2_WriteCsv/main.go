@@ -6,19 +6,6 @@ import (
 	"os"
 )
 
-func writeCsv(csvw *csv.Writer) {
-	var csvdata = [][]string{
-		{"id", "name", "count"},
-		{"1", "Iphone8", "10"},
-		{"2", "Iphone11", "5"},
-		{"3", "Iphone12", "50"},
-	}
-	for _, v := range csvdata {
-		csvw.Write(v)
-	}
-	csvw.Flush()
-}
-
 func writeAllCsv(csvw *csv.Writer) {
 	var csvdata = [][]string{
 		{"id", "name", "count"},
@@ -39,8 +26,6 @@ func main() {
 		fmt.Println("err:", err)
 	}
 	defer f1.Close()
-
 	csvw := csv.NewWriter(f1)
-	//writeCsv(csvw)
 	writeAllCsv(csvw)
 }

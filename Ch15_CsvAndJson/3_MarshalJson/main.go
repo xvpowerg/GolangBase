@@ -1,10 +1,9 @@
 package main
 
 import (
-	"bufio"
 	"encoding/json"
 	"fmt"
-	"os"
+	"io/ioutil"
 )
 
 type product struct {
@@ -14,10 +13,6 @@ type product struct {
 }
 
 func main() {
-	f1, err := os.OpenFile("./product.json",
-		os.O_CREATE|os.O_WRONLY|os.O_TRUNC,
-		0666)
-	fw := bufio.NewWriter(f1)
 
 	//屬性必須大寫 表示公開 才可正確Marshal
 	p1 := product{
@@ -34,6 +29,6 @@ func main() {
 	json := string(jsonData)
 	fmt.Println(json)
 	//Josn轉字串寫出到檔案
-	fw.WriteString(json)
-	fw.Flush()
+	ioutil.WriteFile(`./product.json`, jsonData, 0666)
+
 }
