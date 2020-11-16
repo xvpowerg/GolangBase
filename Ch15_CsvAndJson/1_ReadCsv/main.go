@@ -35,6 +35,7 @@ func main() {
 	defer f1.Close()
 
 	csvr := csv.NewReader(f1)
-	readAllCsv(csvr)
+	readCsv(csvr)
+	//readAllCsv(csvr)
 
 }

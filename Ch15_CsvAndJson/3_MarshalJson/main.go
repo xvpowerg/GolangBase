@@ -29,6 +29,6 @@ func main() {
 	json := string(jsonData)
 	fmt.Println(json)
 	//Josn轉字串寫出到檔案
-	ioutil.WriteFile(`./product.json`, jsonData, 0666)
+	ioutil.WriteFile("product.json", jsonData, 0666)
 
 }

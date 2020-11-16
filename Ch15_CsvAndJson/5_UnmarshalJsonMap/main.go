@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	jsonData, _ := ioutil.ReadFile("./product.json")
+	jsonData, _ := ioutil.ReadFile("product.json")
 	var objMap map[string]interface{}
 	//注意必須objMap是point
 	json.Unmarshal(jsonData, &objMap)

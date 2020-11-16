@@ -14,7 +14,7 @@ type product struct {
 }
 
 func main() {
-	jsonData, _ := ioutil.ReadFile("./product.json")
+	jsonData, _ := ioutil.ReadFile("product.json")
 	var p product
 	//注意必須是point
 	json.Unmarshal(jsonData, &p)
