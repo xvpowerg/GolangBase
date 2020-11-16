@@ -24,6 +24,7 @@ func main() {
 	jsonData, err := json.Marshal(p1)
 	if err != nil {
 		fmt.Println("err:", err)
+		return
 	}
 	//Josn轉字串
 	json := string(jsonData)

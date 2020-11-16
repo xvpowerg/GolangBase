@@ -11,6 +11,7 @@ type product struct {
 	Id    int
 	Name  string
 	Price float32
+	Size  float64
 }
 
 func main() {
