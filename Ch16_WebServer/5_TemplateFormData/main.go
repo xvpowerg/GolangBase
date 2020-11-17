@@ -21,8 +21,8 @@ func init() {
 func home(res http.ResponseWriter, req *http.Request) {
 	idstr := req.FormValue("myId")
 	name := req.FormValue("myName")
-	id, ok := strconv.ParseInt(idstr, 10, 32)
-	if ok != nil {
+	id, err := strconv.ParseInt(idstr, 10, 32)
+	if err != nil {
 		id = 0
 	}
 	user := User{

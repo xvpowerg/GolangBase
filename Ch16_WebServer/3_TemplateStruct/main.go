@@ -13,7 +13,6 @@ type User struct {
 }
 
 func init() {
-
 	temp = template.Must(template.ParseFiles("index.html"))
 }
 

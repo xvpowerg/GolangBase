@@ -36,7 +36,7 @@ func login(res http.ResponseWriter, req *http.Request) {
 	io.WriteString(res, lgoinHTML)
 }
 func main() {
-	// http.Handle("/", http.HandlerFunc(home))
-	// http.Handle("/login", http.HandlerFunc(login))
+	http.Handle("/", http.HandlerFunc(home))
+	http.Handle("/login", http.HandlerFunc(login))
 	http.ListenAndServe(":8080", nil)
 }
