@@ -17,5 +17,4 @@ func main() {
 	// var json = jsoniter.ConfigCompatibleWithStandardLibrary
 	// v, _ := json.Marshal(&product)
 	// fmt.Println(string(v))
-
 }
