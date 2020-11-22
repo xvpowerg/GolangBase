@@ -9,7 +9,7 @@ import (
 )
 
 func QueryLatLng() {
-	jsonURL := "https://maps.googleapis.com/maps/api/geocode/json?address=%s&key=AIzaSyBwjP1wROzaTDQwq1hDceP2x9v2L_7C27I"
+	jsonURL := "https://maps.googleapis.com/maps/api/geocode/json?address=%s&key="
 	addr := "臺北市北投區石牌路二段111號"
 	jsonURL = fmt.Sprintf(jsonURL, addr)
 	//使用Get方式呼叫API
