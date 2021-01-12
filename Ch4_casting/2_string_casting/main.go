@@ -36,5 +36,9 @@ func main() {
 	str4 := "Howard"
 	b := []byte(str4)
 	fmt.Println(b[0])
+	//byte轉字串 也可以放一個Slice
 	fmt.Println(string(b[1]))
+	//整數轉字串
+	str5 := strconv.Itoa(1234)
+	fmt.Println(str5)
 }
