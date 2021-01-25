@@ -29,4 +29,23 @@ func main() {
 	//https://golang.org/pkg/sort/#example_SliceStable
 	sort.SliceStable(peoples, sortFunc)
 	fmt.Println(peoples)
+
+	//Sort Map
+	sortMap := make(map[int]string)
+	keySlice := make([]int, 0)
+	sortMap[10] = "Ken"
+	sortMap[1] = "Vivin"
+	sortMap[2] = "Lindy"
+	sortMap[7] = "Joy"
+	sortMap[8] = "Lucy"
+	for k := range sortMap {
+		keySlice = append(keySlice, k)
+	}
+	sort.Slice(keySlice, func(i, j int) bool {
+		return keySlice[i] < keySlice[j]
+	})
+	for _, k := range keySlice {
+		fmt.Printf("key:%v value:%v\n", k, sortMap[k])
+	}
+
 }

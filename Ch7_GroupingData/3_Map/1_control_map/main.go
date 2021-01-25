@@ -30,5 +30,12 @@ func main() {
 	map2["Ken"] = 78
 	score, ok := map2["Lucy"]
 	fmt.Println(score, ok)*/
+	//使用make建立map 也可加入長度
+	len := 3
+	map3 := make(map[string]int, len)
+	map3["A"] = 10
+	map3["B"] = 20
+	map3["C"] = 30
+	fmt.Println(map3)
 
 }

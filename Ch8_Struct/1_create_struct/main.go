@@ -27,4 +27,5 @@ func main() {
 	st2.name = "Lucy"
 	st2.score = 15.26
 	fmt.Println(st2)
+
 }

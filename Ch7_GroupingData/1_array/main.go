@@ -18,5 +18,10 @@ func main() {
 	for i, v := range arr2 {
 		fmt.Printf("idx: %d,v: %d\n", i, v)
 	}
+	//可不須給長度 Go自動計算
+	arra3 := [...]string{"A", "B", "C"}
+	for idx2, v2 := range arra3 {
+		fmt.Printf("index:%v value:%v", idx2, v2)
+	}
 
 }
